@@ -1,0 +1,83 @@
+extends cs
+
+snippet assetmenu "Unity CreateAssetMenu attribute : UnityEditor" b
+[UnityEngine.CreateAssetMenu(fileName = ${1:NAME}, menuName = ${2:MENUNAME}, order = ${3:ORDER})]
+endsnippet
+
+snippet cor "Unity Coroutine : System.Collections" b
+private IEnumerator Co_${1:METHOD_NAME}()
+{
+	yield break;$0
+}
+endsnippet
+
+snippet cotimer "Unity Coroutine timer : System.Collections"
+public IEnumerator Co_${1:METHOD_NAME}(float duration = 1){
+	float timer = 0;
+	while(timer < 1)
+	{
+		timer += Time.deltaTime / duration;
+		yield return null;$0
+	}
+}
+endsnippet
+
+snippet dl "Debug.Log() : UnityEngine" b
+	Debug.Log($0);
+endsnippet
+
+snippet sf "[SerializeField] attribute : UnityEngine" b
+[SerializeField]
+endsnippet
+
+snippet sfield "Unity serialized field : UnityEngine" b
+[SerializeField] private ${1:TYPE} ${2:NAME};
+endsnippet
+
+snippet utest "Unity playmode test : System.Collections" b
+[UnityTest]
+public IEnumerator ${1:TEST_NAME}()
+{
+	yield return null;$0
+}
+endsnippet
+
+snippet sprop "Unity property with serialized backing field : UnityEngine"
+[SerializeField] private ${1:TYPE} ${3:FIELD_NAME};
+
+public ${1:TYPE} ${2:PROPERTY_NAME} { get { return this.${3:FIELD_NAME}; } }
+endsnippet
+
+snippet zctor "Zenject MonoBehaviour constructor" b
+private ${1:TYPE} _${2:NAME};
+
+[Zenject.Inject]
+public void Construct(${1:TYPE} ${2:NAME})
+{
+	_${2:NAME} = ${2:NAME};
+}
+endsnippet
+
+snippet ztest "Zenject testfixture template" b
+using Zenject;
+using NUnit.Framework;
+
+namespace ${1:NAMESPACE}
+{
+	[TestFixture]
+	public class ${2:FILENAME} : ZenjectUnitTestFixture
+	{
+		private ${3:CLASS} _sut;
+
+		[Test]
+		public void Class_Exists()
+		{
+			Assert.That(_sut, Is.Not.Null);
+		}
+	}
+
+	public class ${3:CLASS}
+	{
+	}
+}
+endsnippet
