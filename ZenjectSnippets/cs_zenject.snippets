@@ -1,3 +1,5 @@
+extends cs
+
 snippet zctor "Zenject MonoBehaviour constructor" b
 private ${1:TYPE} _${2:NAME};
 
@@ -22,12 +24,12 @@ namespace ${1:NAMESPACE}
 		[Test]
 		public void Class_Exists()
 		{
- 			Assert.That(_sut, Is.Not.Null);
+			Assert.That(_sut, Is.Not.Null);
 		}
 	}
 
-  public class ${3:CLASS}
-  {
-  }
+	public class ${3:CLASS}
+	{
+	}
 }
 endsnippet
