@@ -38,11 +38,24 @@ call plug#end()
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets"]
 ```
 
-#### Extenject / Zenject activation:
+When you experience any issues read [:h ultisnips](https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt).
+
+#### Extenject / Zenject snippets activation:
 Add ``"ZenjectSnippets"`` to UltiSnippetDirectories.
 
 ```
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets", "ZenjectSnippets"]
 ```
 
-
+## Snippets
+### UnitySnippets
+| Tab trigger    | Description/output                            |
+|----------------|-----------------------------------------------|
+| assetmenu      | CreateAssetMenu attribute                     |
+| cor            | Coroutine (method)                            |
+| cotimer        | Coroutine timer (method)                      |
+| dl             | ``Debug.Log();``                              |
+| sf             | ``[SerializedField]``                         |
+| sfield         | ``[SerializedField] private $type $name``     |
+| utest          | Playmode test (method)                        |
+| sprop          | Unity property with serialized backing field  |
