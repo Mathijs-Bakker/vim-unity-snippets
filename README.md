@@ -19,17 +19,21 @@ Add the following lines to your .vimrc:
 ```
 Plug 'Mathijs-Bakker/vim-unity-snippets'
 ```
-(Don't forget to do a ``:PlugInstall``)
+(Don't forget to do ``:PlugInstall``)
 
-And add ``UnitySnippets`` to UltiSnipsSnippetDirectories.
-``
+And add ``"UnitySnippets"`` to UltiSnipsSnippetDirectories.
+
+```
 let g:UltiSnipsSnippetDirectories=["UnitySnippets"]
-``
+```
+
 **Example .vimrc:**
 ```
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'Mathijs-Bakker/vim-unity-snippets'
+call plug#begin('~/.vim/plugged')
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+  Plug 'Mathijs-Bakker/vim-unity-snippets'
+call plug#end()
 
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets"]
 ```
