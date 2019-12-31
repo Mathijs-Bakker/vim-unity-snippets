@@ -1,0 +1,33 @@
+snippet zctor "Zenject MonoBehaviour constructor" b
+private ${1:TYPE} _${2:NAME};
+
+[Zenject.Inject]
+public void Construct(${1:TYPE} ${2:NAME})
+{
+	_${2:NAME} = ${2:NAME};
+}
+endsnippet
+
+snippet ztest "Zenject testfixture template" b
+using Zenject;
+using NUnit.Framework;
+
+namespace ${1:NAMESPACE}
+{
+	[TestFixture]
+	public class ${2:FILENAME} : ZenjectUnitTestFixture
+	{
+		private ${3:CLASS} _sut;
+
+		[Test]
+		public void Class_Exists()
+		{
+ 			Assert.That(_sut, Is.Not.Null);
+		}
+	}
+
+  public class ${3:CLASS}
+  {
+  }
+}
+endsnippet
