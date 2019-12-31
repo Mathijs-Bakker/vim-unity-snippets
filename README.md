@@ -12,4 +12,25 @@ Snippets are supported by the following engines:
 Note: I only use UltiSnips so I did not test these snippets on the other engines. If someone does, please send me message of your experience. So I can update this readme for other readers.
 
 ## Installation
-Just like any other snippet.
+
+### UltiSnips & Vim-Plug
+
+Add the following lines to your .vimrc:
+```
+Plug 'Mathijs-Bakker/vim-unity-snippets'
+```
+(Don't forget to do a ``:PlugInstall``)
+
+And add ``UnitySnippets`` to UltiSnipsSnippetDirectories.
+``
+let g:UltiSnipsSnippetDirectories=["UnitySnippets"]
+``
+**Example .vimrc:**
+```
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'Mathijs-Bakker/vim-unity-snippets'
+
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets"]
+```
+
