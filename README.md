@@ -38,3 +38,11 @@ call plug#end()
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets"]
 ```
 
+#### Extenject / Zenject activation:
+Add ``"ZenjectSnippets"`` to UltiSnippetDirectories.
+
+```
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets", "ZenjectSnippets"]
+```
+
+
