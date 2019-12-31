@@ -59,3 +59,9 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets", "ZenjectSnippet
 | sfield         | ``[SerializedField] private $type $name``     |
 | utest          | Playmode test (method)                        |
 | sprop          | Unity property with serialized backing field  |
+
+### ZenjectSnippets
+| Tab trigger    | Description/output                            |
+|----------------|-----------------------------------------------|
+| zctor          | MonoBehaviour constructor                     |
+| ztest          | Zenject unit test fixture file template (TDD) |
