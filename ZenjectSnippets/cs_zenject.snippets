@@ -17,9 +17,9 @@ using NUnit.Framework;
 namespace ${1:NAMESPACE}
 {
 	[TestFixture]
-	public class ${2:`!p fn`} : ZenjectUnitTestFixture
+	public class ${2:CLASS}Tests : ZenjectUnitTestFixture
 	{
-		private ${3:CLASS} _sut;
+		private ${3:SUT} _sut;
 
 		[Test]
 		public void Class_Exists()
@@ -28,7 +28,7 @@ namespace ${1:NAMESPACE}
 		}
 	}
 
-	public class ${3:CLASS}
+	public class ${4:SUT}
 	{
 	}
 }
