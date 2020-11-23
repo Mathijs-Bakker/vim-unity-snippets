@@ -1,5 +1,9 @@
 extends lua
 
+###
+# Busted: 
+##
+
 snippet describeit "Busted: 'describe' with 'it' block" b
 describe("${1:title}", function()
 	it("${2:title}", function()
@@ -17,5 +21,17 @@ endsnippet
 snippet it "Busted: 'it' block" b
 it("${1:title}", function()
 	${0:-- test body}
+end)
+endsnippet
+
+snippet setup "Busted: Setup" b
+setup(function()
+	$0
+end)
+endsnippet
+
+snippet teardown "Busted: Teardown" b
+teardown(function()
+	$0
 end)
 endsnippet
